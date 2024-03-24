@@ -28,9 +28,9 @@ export interface AddItemProps {
 }
 
 const statuses = [
-  { id: 1, name: "to_read" },
-  { id: 2, name: "reading" },
-  { id: 3, name: "read" },
+  { id: 1, name: "Urgent" },
+  { id: 2, name: "Necessary" },
+  { id: 3, name: "Good to Have" },
 ];
 
 export default function AddItem(props: AddItemProps) {
