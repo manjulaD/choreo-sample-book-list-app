@@ -1,10 +1,10 @@
-# Choreo Sample - Book List Application
+# Choreo Sample - Grocery List Application
 
-Welcome to the Choreo Book List Application sample! This application is designed to help you get familiar with the [Choreo](https://console.choreo.dev/) platform and its features.
+Welcome to the Choreo Gorcery List Application sample! This application is designed to help you get familiar with the [Choreo](https://console.choreo.dev/) platform and its features.
 
 ## Overview
 
-This application is a multi-user book list manager. It allows multiple users to maintain their own book lists independently. Each user can add, remove, and view books in their personal book list. It's built using the Choreo platform, showcasing its capabilities in building and deploying multi-user web applications.
+This application is a multi-user Grocery list manager. It allows multiple users to maintain their own Grocery lists independently. Each user can add, remove, and view books in their personal Grocery list. It's built using the Choreo platform, showcasing its capabilities in building and deploying multi-user web applications.
 
 ## Directory Overview
 

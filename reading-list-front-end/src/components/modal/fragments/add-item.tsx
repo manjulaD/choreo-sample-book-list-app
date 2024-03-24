@@ -29,9 +29,9 @@ export interface AddItemProps {
 }
 
 const statuses = [
-  { id: 1, name: "to_read" },
-  { id: 2, name: "reading" },
-  { id: 3, name: "read" },
+  { id: 1, name: "urgent" },
+  { id: 2, name: "good to have" },
+  { id: 3, name: "not really required" },
 ];
 
 export default function AddItem(props: AddItemProps) {
@@ -60,7 +60,7 @@ export default function AddItem(props: AddItemProps) {
       <form className="bg-white rounded pt-2 pb-1">
         <div className="mb-4">
           <label className="block text-gray-700 text-sm font-bold mb-2">
-            Title
+            Name
           </label>
           <input
             className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
@@ -72,19 +72,19 @@ export default function AddItem(props: AddItemProps) {
         </div>
         <div className="mb-4">
           <label className="block text-gray-700 text-sm font-bold mb-2">
-            Author
+            Quantity
           </label>
           <input
             className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             id="author"
             type="text"
-            placeholder="Author"
+            placeholder="Quantity"
             onChange={(e) => setAuthor(e.target.value)}
           />
         </div>
         <div className="mb-4">
           <label className="block text-gray-700 text-sm font-bold mb-2">
-            Status
+            Urgency
           </label>
           <Listbox value={status} onChange={setStatus}>
             <div className="relative mt-1">
@@ -137,7 +137,7 @@ export default function AddItem(props: AddItemProps) {
     <Modal
       isOpen={isOpen}
       setIsOpen={setIsOpen}
-      title="Add Book"
+      title="Add Item"
       children={innerFragment}
       handleSubmit={handleOnSubmit}
       isDisabled={!(name && author)}
