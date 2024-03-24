@@ -10,11 +10,11 @@ app.use(express.urlencoded({ extended: true }));
 app.post("/reading-list/books", (req, res) => {
   const { title, author, status } = req.body;
   const uuid = uuidv4();
-  if (!(status === "read" || status === "to_read" || status === "reading")) {
-    return res.status(400).json({
-      error: "Status is invalid. Accepted statuses: read | to_read | reading",
-    });
-  }
+  // if (!(status === "read" || status === "to_read" || status === "reading")) {
+  //   return res.status(400).json({
+  //     error: "Status is invalid. Accepted statuses: read | to_read | reading",
+  //   });
+  // }
   if (!title || !author || !status) {
     return res.status(400).json({ error: "Title, Status or Author is empty" });
   }
@@ -33,11 +33,11 @@ app.put("/reading-list/books/:uuid", (req, res) => {
   if (!cache.has(uuid)) {
     return res.status(404).json({ error: "UUID does not exist" });
   }
-  if (!(status === "read" || status === "to_read" || status === "reading")) {
-    return res.status(400).json({
-      error: "Status is invalid. Accepted statuses: read | to_read | reading",
-    });
-  }
+  // if (!(status === "read" || status === "to_read" || status === "reading")) {
+  //   return res.status(400).json({
+  //     error: "Status is invalid. Accepted statuses: read | to_read | reading",
+  //   });
+  // }
   const value = cache.get(uuid);
   value.status = status;
   cache.set(uuid, value);

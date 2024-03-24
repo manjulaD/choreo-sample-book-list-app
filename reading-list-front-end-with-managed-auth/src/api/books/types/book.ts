@@ -23,7 +23,7 @@ export interface Book {
 }
 
 export enum Status {
-  reading = "reading",
-  read = "read",
-  to_read = "to_read",
+  reading = "Urgent",
+  read = "Necessary",
+  to_read = "good to Have",
 }
